@@ -1,0 +1,115 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #f69898;
+}
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 990px;
+    margin: 0 auto;
+}
+.container {
+    width: calc(50% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 400px;
+    border: 1px solid #d38080;
+    margin: 4px;
+    flex-direction: column;
+}
+.box {
+    width: 120px;
+    height: 120px;
+    background: beige;
+}
+.mini-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.hole {
+    width: 30px;
+    height: 30px;
+    background: beige;
+    border-radius: 100%;
+    margin: 8px;
+}
+
+.box.perspective-square {
+    transform: rotateZ(32deg) skew(337deg);
+    border-radius: 16px;
+}
+
+.box.z-squares {
+    transform: rotate(89deg) skew(328deg);
+}
+
+.mini-boxes-odd .hole:nth-child(odd) {
+    background: #c3c;
+}
+
+.mini-boxes-4 .hole:nth-child(4) {
+    background: #c3c;
+}
+/* 
+(n) (1) (2) (..)
+(1);
+(-n+5)
+
+(-0+5) 4
+(-1+5) 3,
+(-1+5) 3,
+
+*/
+
+:root {
+    --board: 160px;
+    --square: calc(var(--board) / 8);
+    --color-white: #ffffff;
+    --color-black: #ccc;
+    --frame: calc(var(--board) + var(--square));
+    --frame-color: #ffffff;
+    /* 160px + 20px */
+}
+.mini-boxes-1to5 .hole:nth-child(-n+5){
+    background: #c3c;
+}
+
+.mini-boxes-last .hole:nth-last-child(1){
+    background: #c3c;
+}
+
+.board {
+    width: var(--frame);
+    height: var(--frame);
+    background: var(--frame-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(74deg) skew(151deg, 38deg);
+}
+
+.front {
+    background: #ffffff;
+    width: var(--board);
+    height: var(--board);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: var(--square);
+    height: var(--square);
+}
+
+.square-white {
+    background: var(--color-white);
+}
+
+.square-black {
+    background: var(--color-black);
+}
