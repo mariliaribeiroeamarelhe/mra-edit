@@ -1,0 +1,158 @@
+@import "colors";
+@import "display";
+@import 'buttons';
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@400;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:wght@300;400&display=swap');
+
+html {
+    max-width: $max-width;
+    background-color: $background;
+    padding: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin flex ($display, $direction, $wrap-nowrap, $justify-content, $align-items) {
+    display: $display;
+    flex-direction: $direction;
+    flex-wrap: $wrap-nowrap;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+.header {
+    font-family: 'Poppins', sans-serif;
+}
+
+.doc-title {
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.doc-subtitle {
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.top {
+    @include flex(flex, row, wrap, space-between, center);
+}
+
+.top img {
+    width: 30px;
+}
+
+.nav-bar {
+    @include flex(flex, row, wrap, center, center)
+}
+
+
+// @mixin <nome> (arg1, arg2, arg3, ..) {
+// prop1: arg1, 
+// prop2: arg2,
+// ...
+// }
+
+.project-card {
+    background-color:#707CED;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        height: 250px;
+        width: 250px;
+        border-radius: 150px;
+        background-color: #aac1ff;  
+        opacity: 20%;      
+    }
+
+    &::before {
+        bottom: -150px;
+        left: -64px;
+    }
+
+    &::after {
+        top: -159px;
+        right: -48px;
+    }
+    &-content {
+        height: 150px;
+        padding: 8px 16px 8px 16px;
+    }
+    &-top, &-date {
+        display: flex;
+        align-items: center;
+        height: 40px;
+    }
+    &-top {
+        padding: 16px 16px 8px 16px; 
+    }
+    &-date{
+        padding: 8px 16px 16px 16px;
+    }
+}
+
+.date {
+    z-index: 1;
+}
+
+.project-title {
+    z-index: 3;
+}
+
+.status-card {
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    @include flex(flex, row, wrap, flex-start, center);
+    padding: 16px 8px 16px 8px;
+
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.timeline {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    color: #a7a7a7;
+}
+
+.status-card-icon {
+    background-color: blue;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    @include flex(flex, row, nowrap, center, center)
+    margin-right: 8px;
+}
+
+
+.progress {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+
+img {
+    width: 20px;
+    height: 20px;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #a7a7a7;
+    padding: 10px;
+}

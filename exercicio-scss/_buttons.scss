@@ -1,0 +1,41 @@
+@import 'colors';
+
+.btn {
+    min-width: 125px;
+    width: min-content;
+    border: 0;
+    margin: 8px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: $button;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+
+    &:first-of-type {
+       margin: 8px 8px 8px 0;
+    }
+    &:last-of-type {
+        margin: 8px 0 8px 8px;
+    }
+
+
+    // estados 
+    &_active {
+        background-color: $active-button;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .btn {
+        width: calc(100% / 3 - 16px);
+        min-width: auto;
+        &:first-of-type {
+            margin: 0 8px;
+        }
+        &:last-of-type {
+            margin: 0 8px;
+        }
+    
+    }
+}
