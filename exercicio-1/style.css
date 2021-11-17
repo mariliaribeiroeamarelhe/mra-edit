@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@400;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:wght@300;400&display=swap');
+
+body {
+    max-width: 1350px;
+    height: 1024px;
+    margin: auto;
+}
+
+.all {
+    background: url(./assets/as1orb74.png) no-repeat center;
+    background-size: cover;
+}
+
+
+.header {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232323;
+    opacity: 60%;
+    padding: 52px 60px 52px 60px;
+}
+
+.title {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+
+h1 {
+    padding: 830px 398px 100px 60px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 63.3px;
+    color: #ffffff;  
+}
+
+/* desktop-menu */
+
+.main {
+    background-color: #232323; 
+    height: 1024px;
+}
+
+.top {
+    background-color: #232323;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 52px 60px 52px 60px;
+}
+
+.menu {
+    margin-top: 100px;
+    margin-left: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.active {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 72px;
+    color: #d27979;
+    margin-bottom: 30px;
+}
+
+
+.default {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 72px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* desktop-work */
+
+.background {
+    background-color: #232323;
+    height: 1024px;
+}
+
+.top {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232323;
+    opacity: 60%;
+    height: 85px;
+    padding: 30px 60px 30px 60px;
+}
+
+span {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 24px;
+    color: #ffffff;
+    padding-right: 30px;
+}
+
+.all {
+    color: #d27979;
+}
+
+.gallery {
+    margin-left: 60px;
+}
