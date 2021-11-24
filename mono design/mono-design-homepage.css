@@ -109,14 +109,21 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 50px;
+    margin-left: var(--margin-left);
 }
 
 .categories .spec {
     margin: 0 0 8px 0;
+    color: #000000;
+    font-family: "Gilroy Light";
+    font-size: 14px;
+    text-decoration: none;
+
 }
 
-.spec-kitchen {
-        font-family: "Gilroy ExtraBold";
+.spec-kitchen:hover {
+    font-family: "Gilroy ExtraBold";
 }
 
 nav a {
